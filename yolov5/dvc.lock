@@ -1,0 +1,38 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python train.py
+    deps:
+    - path: ./train.py
+      md5: 1154ecb29a54e70643f7d3d5a06b4e10
+      size: 35197
+    params:
+      params.yaml:
+        train.batch_size: 1
+        train.data: ./data/coco128.yaml
+        train.epochs: 2
+        train.img: 640
+        train.weights: yolov5s.pt
+    outs:
+    - path: runs/train
+      md5: 1c1611deb55a04d9955b0578e5570b7e.dir
+      size: 31992650
+      nfiles: 19
+  detect:
+    cmd: python detect.py
+    deps:
+    - path: ./detect.py
+      md5: d1ad9f35938907057e78c76856562837
+      size: 13645
+    params:
+      params.yaml:
+        detect.conf_thres: 0.1
+        detect.imgsz:
+        - 640
+        detect.source: ./test_images
+        detect.weights: runs/train/exp/weights/best.pt
+    outs:
+    - path: ./runs/detect
+      md5: dc54321a3fb68fdbe261ea8a14d2817c.dir
+      size: 449169
+      nfiles: 2

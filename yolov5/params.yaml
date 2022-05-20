@@ -1,0 +1,15 @@
+# contains the parameters requires to run stages.
+# for example to run the train.py as a stage, the parameters are: --img 640 --batch 16 --epochs 50 --data data.yaml --weights yolov5s.pt
+# according the the README instructions.
+
+train:
+    img: 640
+    batch_size: 32
+    epochs: 2
+    data: ./data/coco128.yaml
+    weights: yolov5s.pt
+detect:
+    weights: runs/train/exp/weights/best.pt
+    imgsz: [640]
+    conf_thres: 0.1
+    source: ./test_images

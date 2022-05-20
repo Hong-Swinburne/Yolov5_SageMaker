@@ -1,0 +1,15 @@
+# template file contains the parameters requires to run stages.
+# for example to run the train.py as a stage, the parameters are: --img 640 --batch 16 --epochs 50 --data data.yaml --weights yolov5s.pt
+# according the the README instructions.
+
+train:
+    img: {train_img}
+    batch_size: {train_batch_size}
+    epochs: {train_epochs}
+    data: {train_data}
+    weights: {train_weights}
+detect:
+    weights: {detect_weights}
+    imgsz: [{detect_imgsz}]
+    conf_thres: {detect_conf_thres}
+    source: {detect_source}

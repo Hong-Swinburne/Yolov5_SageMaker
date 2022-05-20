@@ -1,0 +1,8 @@
+path: /opt/ml/input/data/powercor_dataset  # dataset root dir in sagemaker container, need to set as per where data locate 
+train: train/images
+val: valid/images
+test: test/images
+
+nc: 15
+names: ['pole_concrete', 'xarm_wood', 'xarm_steel', 'Post_5Sh_GY', 'Post_9Sh_GY', 'Post_10Sh_GY', 'Post_11Sh_GY', 'Post_12Sh_GY', 
+        'Disc_2Sh', 'Disc_3Sh', 'Disc_4Sh', 'LV_Pin', 'LV_Shackle', 'Insulator_Other', 'Birdcover']

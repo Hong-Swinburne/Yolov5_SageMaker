@@ -1,0 +1,26 @@
+stages:
+  train:
+    cmd: python train.py
+    deps:
+    - ./train.py
+    params:
+    - train.batch_size
+    - train.data
+    - train.epochs
+    - train.img
+    - train.weights
+    outs:
+    - runs/train
+  detect:
+    cmd: python detect.py
+    deps:
+    - ./detect.py
+    params:
+    - detect.conf_thres
+    - detect.imgsz
+    - detect.source
+    - detect.weights
+    outs:
+    - ./runs/detect
+# train: dvc run -f -n train -p train.img,train.batch_size,train.epochs,train.data,train.weights -d ./train.py -o runs/train python train.py
+# detect: dvc run -n detect -p detect.weights,detect.imgsz,detect.conf_thres,detect.source -d ./detect.py -o ./runs/detect  python detect.py

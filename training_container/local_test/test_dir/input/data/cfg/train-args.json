@@ -1,0 +1,10 @@
+{
+   "FP_DATA": "/opt/ml/input/data/cfg/powercor_dataset.yaml",
+   "FP_YOLO": "/opt/ml/input/data/cfg/yolov5s.yaml",
+   "FP_HYP": "/opt/ml/input/data/cfg/hyp.scratch-low.yaml",
+   "FP_WEIGHT": "/opt/ml/input/data/weights/yolov5s.pt",
+   "NAME": "yolo5",
+   "IMG_SIZE": "640",
+   "EPOCHS": "2",
+   "BATCH": "32"
+}

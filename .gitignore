@@ -1,0 +1,12 @@
+inference_container/local_test/test_dir/code/.sagemaker
+inference_container/local_test/test_dir/code/logs
+inference_container/local_test/test_dir/input/data/images/inference/detect
+inference_container/local_test/test_dir/input/data/images/inference/input_images
+yolov5/pretrained
+yolov5/powercor_dataset/test
+yolov5/powercor_dataset/train
+yolov5/powercor_dataset/valid
+training_container/local_test/test_dir/input/data/images
+training_container/local_test/test_dir/input/data/labels
+training_container/local_test/test_dir/input/data/weights
+training_container/local_test/test_dir/model/yolo5

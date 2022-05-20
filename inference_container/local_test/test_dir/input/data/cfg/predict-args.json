@@ -1,0 +1,7 @@
+{
+    "FP_SOURCE": "/opt/ml/model/input/data/images/inference/input_images",
+    "FP_WEIGHT": "/opt/ml/model/input/data/weights/best.pt",
+    "CONF": "0.5",
+    "NAME": "powercor",
+    "FP_OUTPUT": "/opt/ml/model/input/data/images/inference/detect"
+ }
